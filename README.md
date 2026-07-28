@@ -1,20 +1,39 @@
 # Career e-Portfolio — Anika Diaz de Rivera
 
-Live at **https://vmgax.github.io/career-portfolio/**
+**Two designs are live at once so the client can choose.**
 
-A four-page static website. No build step, no npm, no framework — open the files in a
-text editor, save, refresh the browser.
+| | Style | URL |
+| --- | --- | --- |
+| **Version A** | Editorial — warm paper, Fraunces serif, oxblood accent, magazine grid | https://vmgax.github.io/career-portfolio/ |
+| **Version B** | Institutional — off-white, Newsreader + Manrope, forest green, spacious | https://vmgax.github.io/career-portfolio/v2/ |
+
+Each footer links to the other version. Once one is chosen, promote it to the root,
+delete the other folder, and remove those two links plus the `noindex` tags on v2.
+
+Static HTML/CSS/JS. No build step, no npm, no framework — edit, save, refresh.
 
 ```
-index.html      Home        self-introduction · contents index
-about.html      About Me    LinkedIn · education · positions & experiences · résumé · skills
-portfolio.html  Portfolio   academic work samples · internship work · references
+index.html      Home        self-introduction · contents index          ← Version A
+about.html      About Me    education · positions · résumé · skills
+portfolio.html  Portfolio   academic work · organization work · references
 contact.html    Contact     email · LinkedIn · location
-styles.css      All styling
-main.js         Mobile nav · scroll reveals · image lightbox
-assets/img/     Photos and scans
-assets/docs/    PDFs (resume.pdf)
+styles.css      Version A styling
+main.js         Version A behaviour
+
+v2/index.html      Overview       hero · snapshot · impact · featured work · timeline · capabilities   ← Version B
+v2/about.html      Experience     intro · education · experience · awards · skills · direction
+v2/portfolio.html  Selected Work  category filters · 10 expandable case studies
+v2/contact.html    Contact        split layout · validated message form
+v2/styles.css      Version B styling
+v2/main.js         Version B behaviour
+
+assets/img/     Photos — SHARED by both versions
+assets/docs/    resume.pdf — SHARED by both versions
 ```
+
+> **Sync rule.** Content lives in two places until one version is retired. Any change to
+> wording, dates or projects must be made in **both** the root files and `v2/`. Images and
+> the résumé PDF are shared, so those only ever change once.
 
 ## Still to add
 

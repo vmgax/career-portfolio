@@ -1186,6 +1186,20 @@ main { position: relative; z-index: 1; display: block; }
   color: rgba(244, 239, 228, 0.5);
 }
 
+/* version switch — temporary, while both designs are up for review */
+.version-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(244, 239, 228, 0.72);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244, 239, 228, 0.28);
+  padding-bottom: 1px;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.version-switch:hover { color: var(--paper); border-color: var(--paper); }
+
 /* 12 — MOTION ============================================================= */
 
 @keyframes rise-in {
