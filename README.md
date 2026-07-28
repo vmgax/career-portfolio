@@ -27,16 +27,13 @@ assets/docs/    resume.pdf (web-safe version — see the privacy note below)
 
 ## Still open
 
+All dates are confirmed. Two optional additions remain, both marked `REPLACE` in HTML
+comments — nothing is a visible placeholder, and the site reads as finished without them.
+
 | # | What | Where |
 | --- | --- | --- |
-| 1 | Confirm the **Sep 2024 – Apr 2025** date for Committee Coordinator (source read *Sep 2025 – Apr 2025*, which ends before it starts) | `index.html`, `about.html` — search `CHECK` |
-| 2 | Confirm Archers Network HR Head start: **Aug 2025** used; the CV says Sep 2025 | search `CHECK` |
-| 3 | Confirm Chinese New Year year: **2024** used; the CV says 2023 | search `CHECK` |
-| 4 | *Optional* — the month ENGLIVision ran, and the name of the "Event Operations" event | `portfolio.html` — search `REPLACE` |
-| 5 | *Optional* — a public Canva **view** link for the full thesis | `portfolio.html` |
-
-Nothing above is a visible placeholder — the site reads as finished. `CHECK` and `REPLACE`
-appear only in HTML comments.
+| 1 | *Optional* — the month ENGLIVision ran, and the name of the "Event Operations" event | `portfolio.html` |
+| 2 | *Optional* — a public Canva **view** link for the full thesis (never the `/edit` URL) | `portfolio.html` |
 
 ## How to edit
 
