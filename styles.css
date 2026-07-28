@@ -543,7 +543,9 @@ p { margin: 0; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(1.75rem, 4vw, 3.5rem);
-  align-items: center;
+  /* images keep their natural height, so start-align rather than stranding the
+     copy halfway down a tall poster */
+  align-items: start;
 }
 
 .work:nth-child(even) .work__media { order: 2; }
@@ -556,10 +558,12 @@ p { margin: 0; }
   background: var(--surface-sunk);
 }
 
+/* natural proportions — event posters carry titles, dates and sponsor bars
+   that a fixed crop would cut off */
 .work__media img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   transition: transform 600ms var(--ease);
 }
 
@@ -1019,11 +1023,9 @@ p { margin: 0; }
 .case__media:focus-visible { outline-offset: -3px; }
 
 .case__media img {
+  display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  /* anchor to the top so tall event posters show their title, not a middle slice */
-  object-position: center top;
+  height: auto;
   transition: transform 600ms var(--ease);
 }
 
