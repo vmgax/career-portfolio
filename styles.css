@@ -952,22 +952,25 @@ main { position: relative; z-index: 1; display: block; }
 
 .gallery-item { grid-column: span 6; margin: 0; align-self: start; }
 
-/* magazine rhythm: alternate wide / narrow and drop every other one */
-.gallery-item:nth-child(4n + 1) { grid-column: span 7; }
-.gallery-item:nth-child(4n + 2) { grid-column: span 5; margin-top: clamp(1.5rem, 5vw, 4rem); }
-.gallery-item:nth-child(4n + 3) { grid-column: span 5; }
-.gallery-item:nth-child(4n + 4) { grid-column: span 7; margin-top: clamp(1.5rem, 5vw, 4rem); }
+/* magazine rhythm: alternate wide / narrow and drop every other one.
+   :not() keeps feature items out of it so the two rules cannot tie. */
+.gallery-item:nth-child(4n + 1):not(.gallery-item--feature) { grid-column: span 7; }
+.gallery-item:nth-child(4n + 2):not(.gallery-item--feature) { grid-column: span 5; margin-top: clamp(1.5rem, 5vw, 4rem); }
+.gallery-item:nth-child(4n + 3):not(.gallery-item--feature) { grid-column: span 5; }
+.gallery-item:nth-child(4n + 4):not(.gallery-item--feature) { grid-column: span 7; margin-top: clamp(1.5rem, 5vw, 4rem); }
 
-/* feature item — a tall research poster beside its write-up rather than above it.
-   Declared after the nth-child spans so it wins on source order. */
-.gallery-item.gallery-item--feature {
+/* feature item — a tall research poster held to a narrow column on the left,
+   with its write-up beside it rather than underneath */
+.gallery-item--feature {
   grid-column: span 12;
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
   gap: clamp(1.5rem, 3vw, 3.5rem);
   align-items: start;
   margin-top: 0;
 }
+
+.gallery-item--feature .figure-frame { max-width: 24rem; }
 
 .gallery-item--feature .gallery-caption { margin-top: 0; }
 
