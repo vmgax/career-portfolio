@@ -20,13 +20,13 @@ assets/docs/    PDFs (resume.pdf)
 
 | # | What | Where |
 | --- | --- | --- |
-| 1 | **Your portrait** — still the grey placeholder | `index.html` hero |
-| 2 | **Thesis image, title, description + public Canva view link** | `portfolio.html` sample A/01 |
-| 3 | **Your role in ENGLIVision**, and the name of the Event Operations event | `portfolio.html` B/01, B/03 |
-| 4 | **A closing line** on what you are aiming at after graduation | `index.html` |
+| 1 | **Thesis image, title, description + public Canva view link** | `portfolio.html` sample A/01 |
+| 2 | **Dates you were Project Head of ENGLIVision** — currently "Date to confirm" | `about.html` ENGLICOM block |
+| 3 | **Name of the "Event Operations" event** (optional) | `portfolio.html` B/03 |
 
-Nine event photos are in and captioned. Three `CHECK` comments mark dates that
-conflict between your two source documents — search for `CHECK` to see them.
+Everything else is in: portrait, nine event photos with captions, the full CV
+detail, and the résumé PDF. Three `CHECK` comments mark dates that conflict
+between your two source documents — search for `CHECK` to see them.
 
 Search all files for `REPLACE` — that is the complete checklist. Anything marked
 `CHECK` is something in the source document that looked wrong and was left as written.
