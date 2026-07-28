@@ -958,6 +958,19 @@ main { position: relative; z-index: 1; display: block; }
 .gallery-item:nth-child(4n + 3) { grid-column: span 5; }
 .gallery-item:nth-child(4n + 4) { grid-column: span 7; margin-top: clamp(1.5rem, 5vw, 4rem); }
 
+/* feature item — a tall research poster beside its write-up rather than above it.
+   Declared after the nth-child spans so it wins on source order. */
+.gallery-item.gallery-item--feature {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+  align-items: start;
+  margin-top: 0;
+}
+
+.gallery-item--feature .gallery-caption { margin-top: 0; }
+
 .figure-frame {
   position: relative;
   display: block;
@@ -1238,6 +1251,11 @@ main { position: relative; z-index: 1; display: block; }
   .gallery-item:nth-child(4n + 2),
   .gallery-item:nth-child(4n + 3),
   .gallery-item:nth-child(4n + 4) { grid-column: span 12; margin-top: 0; }
+
+  .gallery-item.gallery-item--feature {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 3vw, 1.75rem);
+  }
 }
 
 @media (max-width: 53.75rem) {
