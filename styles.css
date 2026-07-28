@@ -950,7 +950,7 @@ main { position: relative; z-index: 1; display: block; }
   gap: clamp(1.5rem, 3.5vw, 3rem) clamp(1.25rem, 3vw, 2.5rem);
 }
 
-.gallery-item { grid-column: span 6; margin: 0; }
+.gallery-item { grid-column: span 6; margin: 0; align-self: start; }
 
 /* magazine rhythm: alternate wide / narrow and drop every other one */
 .gallery-item:nth-child(4n + 1) { grid-column: span 7; }
@@ -969,15 +969,14 @@ main { position: relative; z-index: 1; display: block; }
   cursor: zoom-in;
 }
 
+/* natural proportions — event posters carry dates and sponsor bars that a
+   fixed crop would cut off */
 .figure-frame img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   transition: transform 0.6s var(--ease), filter 0.6s var(--ease);
 }
-
-.gallery-item:nth-child(4n + 2) .figure-frame img,
-.gallery-item:nth-child(4n + 3) .figure-frame img { aspect-ratio: 3 / 4; }
 
 .figure-frame::after {
   content: 'VIEW';
@@ -1239,7 +1238,6 @@ main { position: relative; z-index: 1; display: block; }
   .gallery-item:nth-child(4n + 2),
   .gallery-item:nth-child(4n + 3),
   .gallery-item:nth-child(4n + 4) { grid-column: span 12; margin-top: 0; }
-  .gallery-item .figure-frame img { aspect-ratio: 4 / 3 !important; }
 }
 
 @media (max-width: 53.75rem) {
