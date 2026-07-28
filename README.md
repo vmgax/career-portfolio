@@ -20,12 +20,11 @@ assets/docs/    PDFs (resume.pdf)
 
 | # | What | Where |
 | --- | --- | --- |
-| 1 | **`resume.pdf`** — the download links 404 until this exists | `assets/docs/resume.pdf` |
-| 2 | **Your photo** — replaces the grey portrait placeholder | `index.html` hero |
-| 3 | **Work sample images** — 8 slots, all still placeholders | `portfolio.html` |
-| 4 | **Thesis title + description + public Canva link** | `portfolio.html` sample 01 |
-| 5 | **Descriptions** for each work sample | `portfolio.html` |
-| 6 | **Second intro paragraph** (optional but recommended) | `index.html` |
+| 1 | **Your photo** — replaces the grey portrait placeholder | `index.html` hero |
+| 2 | **Work sample images** — 8 slots, all still placeholders | `portfolio.html` |
+| 3 | **Thesis title + description + public Canva link** | `portfolio.html` sample 01 |
+| 4 | **Descriptions** for each work sample | `portfolio.html` |
+| 5 | **A closing line** on what you are aiming at after graduation | `index.html` |
 
 Search all files for `REPLACE` — that is the complete checklist. Anything marked
 `CHECK` is something in the source document that looked wrong and was left as written.
