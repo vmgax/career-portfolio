@@ -729,6 +729,78 @@ main { position: relative; z-index: 1; display: block; }
 .entry-body li { margin-top: 0.4rem; }
 .entry-body li:first-child { margin-top: 0; }
 
+/* organisation blocks — one per org, roles nested inside */
+.org {
+  padding-block: clamp(1.75rem, 3.5vw, 2.5rem);
+  border-top: 1px solid var(--rule);
+}
+
+.org:first-child { border-top: 0; padding-top: 0; }
+
+.org-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.org-name {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.org-kind {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.org-roles { margin-top: clamp(1rem, 2vw, 1.5rem); }
+
+/* contact page — oversized link list */
+.contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.contact-list a,
+.contact-list .contact-static {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1.5rem;
+  padding-block: clamp(1.25rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  line-height: 1.15;
+  text-decoration: none;
+  word-break: break-word;
+  transition: color 0.35s var(--ease), padding-left 0.45s var(--ease);
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+  padding-left: 0.75rem;
+}
+
+.contact-kind {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  flex: none;
+}
+
 /* tag row */
 .tag-row {
   display: flex;
