@@ -3,33 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio — Anika Diaz de Rivera</title>
-  <meta name="description" content="Academic work, organisation and volunteer projects, internship work, and references — Anika Diaz de Rivera.">
+  <title>Selected Work — Anika Diaz de Rivera</title>
+  <meta name="description" content="Selected work by Anika Diaz de Rivera — academic research, civic engagement, events, human resources, communications and internship projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Selected Work — Anika Diaz de Rivera">
+  <meta property="og:description" content="Ten projects across research, civic engagement, events, human resources, communications and internship work.">
+  <meta property="og:url" content="https://vmgax.github.io/career-portfolio/portfolio.html">
+  <meta property="og:image" content="https://vmgax.github.io/career-portfolio/assets/img/habitat-re-leaf-the-heat.jpg">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="masthead">
-    <div class="shell masthead-inner">
-      <a class="wordmark" href="index.html">Anika Diaz de Rivera<span></span></a>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">AD</span>
+        <span class="brand__full">Anika Diaz de Rivera</span>
+        <span class="brand__short">Anika D.</span>
+      </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>Menu
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="about.html">Experience</a></li>
+          <li><a href="portfolio.html" aria-current="page">Selected Work</a></li>
+          <li><a href="about.html#capabilities">Skills</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <a class="btn btn--primary btn--sm" href="assets/docs/resume.pdf" download>
+          Résumé <span class="btn__arrow" aria-hidden="true">↓</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -38,339 +51,602 @@
 
     <section class="page-head">
       <div class="shell">
-        <p class="hero-eyebrow mono load-in" style="--d:.05s">02 / Portfolio</p>
-        <h1 class="page-head-title load-in" style="--d:.15s">Work I am proud of</h1>
-        <p class="page-head-lede load-in" style="--d:.25s">
-          Academic research, organisation and volunteer projects, and internship work —
-          with the people who can speak to how I work.
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Overview</a></li>
+            <li><span aria-current="page">Selected Work</span></li>
+          </ol>
+        </nav>
+        <p class="eyebrow enter">Selected work</p>
+        <h1 class="enter" style="--d:80ms; max-width:16ch; margin-top:1.25rem">
+          Ten projects, six kinds of work
+        </h1>
+        <p class="lede enter" style="--d:160ms; margin-top:1.25rem">
+          Academic research, civic engagement, events, human resources, communications and
+          internship work. Filter by category, or open a project for the detail.
         </p>
       </div>
     </section>
 
-    <!-- ── A · ACADEMIC ────────────────────────────────────────────────────── -->
-    <section class="band">
+    <section class="section">
       <div class="shell">
-        <div class="band-head reveal">
-          <span class="band-index">A / Academic</span>
-          <h2 class="band-title">Academic work</h2>
-          <p class="band-note">Research produced for the Development Studies programme.</p>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="academic" aria-pressed="false">Academic</button>
+          <button class="filter" type="button" data-filter="civic" aria-pressed="false">Civic Engagement</button>
+          <button class="filter" type="button" data-filter="events" aria-pressed="false">Events</button>
+          <button class="filter" type="button" data-filter="hr" aria-pressed="false">Human Resources</button>
+          <button class="filter" type="button" data-filter="comms" aria-pressed="false">Communications</button>
+          <button class="filter" type="button" data-filter="internship" aria-pressed="false">Internship</button>
         </div>
 
-        <div class="gallery">
-          <figure class="gallery-item gallery-item--feature reveal">
-            <button class="figure-frame" type="button"
+        <p class="filter-status" data-filter-status role="status" aria-live="polite">Showing all 10 projects</p>
+
+        <div class="case-grid" data-cases>
+
+          <!-- 01 · THESIS ---------------------------------------------------- -->
+          <article class="case reveal" id="thesis" data-category="academic">
+            <button class="case__media" type="button"
                     data-lightbox-src="assets/img/thesis-unstructured-hiring.jpg"
-                    data-lightbox-caption="Unstructured Hiring: Informal Recruitment Practices in the Filipino AI Data Labor Market">
-              <img src="assets/img/thesis-unstructured-hiring.jpg"
-                   alt="Research poster titled Unstructured Hiring: Informal Recruitment Practices in the Filipino AI Data Labor Market, laying out the background, research questions, framework, findings, conclusion and recommendations"
-                   loading="lazy">
+                    data-lightbox-caption="Unstructured Hiring: Informal Recruitment Practices in the Filipino AI Data Labor Market — research poster">
+              <img src="assets/img/thesis-unstructured-hiring.jpg" width="1400" height="2100" loading="lazy"
+                   alt="Research poster titled Unstructured Hiring, setting out the background, research questions, framework, findings, conclusion and recommendations">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>01</b> <span>Undergraduate Thesis · De La Salle University</span></p>
-              <h3 class="gallery-title">Unstructured Hiring</h3>
-              <p class="gallery-desc">
-                <em>Informal Recruitment Practices in the Filipino AI Data Labor Market.</em>
-                A qualitative case study of how Filipino AI data laborers are recruited
-                through Facebook and Reddit, and how those informal practices produce
-                precarious work. We found the platforms function as genuinely accessible
-                entry points — flexible schedules, remote work, immediate income — while
-                the same postings routinely lack written contracts, clear payment terms,
-                benefits and grievance mechanisms. The study argues that the absence of
-                regulatory policy in the Philippine AI and digital labour sector is what
-                normalises the arrangement, and calls for clearer labour policy, fuller
-                disclosure in recruitment posts, and platform accountability.
+            <div class="case__body">
+              <p class="case__tag">Academic</p>
+              <h2 class="case__title">Unstructured Hiring</h2>
+              <p class="case__org">Undergraduate thesis · De La Salle University</p>
+              <p class="case__outcome">
+                A qualitative case study of how Filipino AI data laborers are recruited through
+                Facebook and Reddit — and how informal recruitment produces precarious work.
               </p>
-              <p class="gallery-desc" style="margin-top:.9rem">
-                <strong>Proponents:</strong> Tiu Sonco, Francis John M. · Baldago, Hannah
-                Margarita I. · Diaz de Rivera, Anika Beatriz D.
-              </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Qualitative Research</li>
-                <li class="tag">Case Study</li>
-                <li class="tag">Labour Policy</li>
-                <li class="tag">Digital Labour</li>
+              <ul class="case__skills">
+                <li>Qualitative research</li>
+                <li>Case study</li>
+                <li>Policy analysis</li>
               </ul>
-              <!-- Optional: to link the full Canva deck, paste the PUBLIC VIEW link
-                   (Share → anyone with the link → can view) and remove these markers.
-              <a class="gallery-link" href="PASTE-PUBLIC-VIEW-LINK" target="_blank" rel="noopener">
-                View the full study <span aria-hidden="true">↗</span>
-              </a>
-              -->
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-thesis">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-thesis">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>Generative AI has driven rapid growth in AI freelancing, opening work to
+                        Filipino workers through platforms such as Facebook and Reddit. The study
+                        examines how those workers are recruited on social networking sites, and
+                        how the resulting informal arrangements contribute to precarious work.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Research questions</h4>
+                      <ul>
+                        <li>How are Facebook and Reddit used to recruit Filipino AI data laborers — in posting frequency, types of companies, and recruitment structures?</li>
+                        <li>What draws Filipinos into AI data labor despite informal arrangements, low pay and limited protections?</li>
+                        <li>How does the lack of regulatory policy in the Philippine AI and digital labor sector normalize informal recruitment?</li>
+                      </ul>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Findings</h4>
+                      <p>Facebook and Reddit function as genuinely accessible recruitment spaces —
+                        workers are drawn by flexible schedules, remote work, easy applications and
+                        immediate income. The same postings routinely lack written contracts, clear
+                        payment terms, benefits and grievance mechanisms, leaving workers exposed to
+                        unstable and potentially exploitative conditions.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Recommendations</h4>
+                      <p>Clearer government labor policy for AI data work and platform-based
+                        employment; full disclosure of wages, tasks, contracts and worker rights in
+                        recruitment posts; and shared accountability between platforms, employers
+                        and workers for safer, more transparent recruitment.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Proponents</h4>
+                      <p>Tiu Sonco, Francis John M. · Baldago, Hannah Margarita I. ·
+                        Diaz de Rivera, Anika Beatriz D.</p>
+                    </div>
+                    <!-- Optional: paste the Canva PUBLIC VIEW link (Share → anyone with the
+                         link → can view) as a detail-block with a text-link. Never the /edit URL. -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-    <!-- ── B · ORGANISATION & VOLUNTEER WORK ───────────────────────────────── -->
-    <section class="band">
-      <div class="shell">
-        <div class="band-head reveal">
-          <span class="band-index">B / Organisation &amp; Volunteer</span>
-          <h2 class="band-title">Projects, events &amp; campaigns</h2>
-          <p class="band-note">
-            Civic work, fundraising, publications and event operations across ENGLICOM,
-            Habitat for Humanity, Development Initiative and Archers Network.
-          </p>
-        </div>
-
-        <div class="gallery">
-
-          <figure class="gallery-item reveal">
-            <button class="figure-frame" type="button"
+          <!-- 02 · ENGLIVISION ----------------------------------------------- -->
+          <article class="case reveal" id="englivision" data-category="events" style="--d:60ms">
+            <button class="case__media" type="button"
                     data-lightbox-src="assets/img/englicom-englivision.jpg"
                     data-lightbox-caption="ENGLIVision: Business Beyond Profit — DLSU ENGLICOM">
-              <img src="assets/img/englicom-englivision.jpg" alt="ENGLIVision: Business Beyond Profit — full-house group photo of attendees behind the ENGLICOM letters">
+              <img src="assets/img/englicom-englivision.jpg" width="1024" height="1280" loading="lazy"
+                   alt="ENGLIVision: Business Beyond Profit thank-you poster showing a capacity audience behind the ENGLICOM letters">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>01</b> <span>DLSU ENGLICOM</span></p>
-              <h3 class="gallery-title">ENGLIVision: Business Beyond Profit</h3>
-              <p class="gallery-desc">
-                A flagship ENGLICOM conference on business that serves more than profit,
-                run with a full slate of industry co-presenters and sponsors and a
-                capacity audience. I served as <strong>Project Head</strong> — owning the
-                event end to end, from planning and partner line-up through to
-                execution on the day.
+            <div class="case__body">
+              <p class="case__tag">Events</p>
+              <h2 class="case__title">ENGLIVision: Business Beyond Profit</h2>
+              <p class="case__org">DLSU ENGLICOM · Project Head</p>
+              <p class="case__outcome">
+                Led ENGLICOM&rsquo;s flagship conference from planning through execution, backed by
+                ten co-presenting partners and sponsors.
               </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Project Head</li>
-                <li class="tag">Event Management</li>
-                <li class="tag">Partnerships</li>
+              <ul class="case__skills">
+                <li>Event management</li>
+                <li>Partnerships</li>
+                <li>Project management</li>
               </ul>
-            </figcaption>
-          </figure>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-englivision">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-englivision">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>ENGLIVision is ENGLICOM&rsquo;s flagship conference, built around the premise
+                        that business can serve more than profit. It ran to a capacity audience of
+                        students and guests.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>My role</h4>
+                      <p>Project Head — responsible for the event end to end: planning, the partner
+                        and sponsor line-up, and execution on the day.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Partners and sponsors</h4>
+                      <p>Ten brands backed the conference across hydration partner, co-presenter,
+                        co-partner, bronze sponsor and media sponsor tiers.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Skills demonstrated</h4>
+                      <p>Event management, sponsor and partner relations, team coordination, and
+                        delivery under a fixed date.</p>
+                    </div>
+                    <!-- REPLACE (optional): the month/year ENGLIVision ran, and one line on the
+                         biggest problem you had to solve as Project Head. -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-          <figure class="gallery-item reveal" style="--d:.08s">
-            <button class="figure-frame" type="button"
-                    data-lightbox-src="assets/img/englicom-lsdp-play-day.jpg"
-                    data-lightbox-caption="LSDP: Play Day, 12 July 2025 — DLSU ENGLICOM">
-              <img src="assets/img/englicom-lsdp-play-day.jpg" alt="LSDP: Play Day thank-you poster showing volunteers with a child at the day care centre">
-            </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>02</b> <span>ENGLICOM · 12 July 2025</span></p>
-              <h3 class="gallery-title">LSDP: Play Day</h3>
-              <p class="gallery-desc">
-                A civic activity for Little Stars Day Care in Plaridel, Bulacan — one of
-                ENGLICOM&rsquo;s partner beneficiaries — held during my term as Assistant
-                Vice President for Civics.
-              </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Civic Engagement</li>
-                <li class="tag">Event Planning</li>
-              </ul>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-item reveal" style="--d:.16s">
-            <button class="figure-frame" type="button"
-                    data-lightbox-src="assets/img/englicom-event-operations.jpg"
-                    data-lightbox-caption="Event operations — DLSU ENGLICOM">
-              <img src="assets/img/englicom-event-operations.jpg" alt="Organisers at the registration desk during an ENGLICOM event">
-            </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>03</b> <span>DLSU ENGLICOM</span></p>
-              <h3 class="gallery-title">Event Operations</h3>
-              <p class="gallery-desc">
-                On the ground at registration and front-of-house — the unglamorous half
-                of event planning that decides whether the day runs.
-                <!-- REPLACE: name the event and your role if you would like it specific -->
-              </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Operations</li>
-              </ul>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-item reveal">
-            <button class="figure-frame" type="button"
-                    data-lightbox-src="assets/img/habitat-hands-and-hearts.jpg"
-                    data-lightbox-caption="Hands &amp; Hearts: HFH Chapters Networking Initiative, 29 March 2025">
-              <img src="assets/img/habitat-hands-and-hearts.jpg" alt="Hands and Hearts event poster — Habitat for Humanity chapters networking initiative, 29 March 2025">
-            </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>04</b> <span>Habitat for Humanity · 29 March 2025</span></p>
-              <h3 class="gallery-title">Hands &amp; Hearts</h3>
-              <p class="gallery-desc">
-                A networking initiative bringing together the Habitat for Humanity Blue,
-                UPD and Green chapters around housing, building and volunteer management.
-                I led, managed and created the content under the event&rsquo;s IMC wing,
-                and helped facilitate and execute the event proper.
-              </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">IMC Planning</li>
-                <li class="tag">Publications</li>
-                <li class="tag">Partnerships</li>
-              </ul>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-item reveal">
-            <button class="figure-frame" type="button"
+          <!-- 03 · RE-LEAF THE HEAT ------------------------------------------ -->
+          <article class="case reveal" id="re-leaf" data-category="civic" style="--d:120ms">
+            <button class="case__media" type="button"
                     data-lightbox-src="assets/img/habitat-re-leaf-the-heat.jpg"
                     data-lightbox-caption="Re-Leaf the Heat! — Habitat Youth Solutions 2025, Top 3 of 80+ entries">
-              <img src="assets/img/habitat-re-leaf-the-heat.jpg" alt="Re-Leaf the Heat project card describing vertical green walls installed on 30 homes in Metro Manila">
+              <img src="assets/img/habitat-re-leaf-the-heat.jpg" width="750" height="745" loading="lazy"
+                   alt="Re-Leaf the Heat project card describing vertical green walls installed on 30 homes in Metro Manila">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>05</b> <span>Habitat Youth Solutions 2025 · Top 3 of 80+</span></p>
-              <h3 class="gallery-title">Re-Leaf the Heat!</h3>
-              <p class="gallery-desc">
-                An urban greening initiative against extreme heat in Metro Manila&rsquo;s
-                informal settlements, installing vertical green walls on 30 homes. It
-                directly benefits 30 households and engages over 150 individuals, with
-                indirect impact reaching up to 500 community members. As a project member
-                the entry placed in the Top 3 of more than 80 submissions and won a
-                USD 4,000 grant.
+            <div class="case__body">
+              <p class="case__tag">Civic Engagement</p>
+              <h2 class="case__title">Re-Leaf the Heat!</h2>
+              <p class="case__org">Habitat for Humanity — Green Chapter · Project member</p>
+              <p class="case__outcome">
+                An urban greening initiative against extreme heat that placed in the Top 3 of
+                more than 80 entries and won a USD 4,000 grant.
               </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Project Development</li>
-                <li class="tag">Climate Resilience</li>
+              <ul class="case__skills">
+                <li>Project development</li>
+                <li>Climate resilience</li>
+                <li>Community engagement</li>
               </ul>
-            </figcaption>
-          </figure>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-releaf">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-releaf">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>Re-Leaf the Heat! tackles extreme heat in Metro Manila&rsquo;s informal
+                        settlements by installing vertical green walls on 30 homes. The natural
+                        cooling system reduces indoor temperatures, promotes sustainable living and
+                        improves public health.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Approach</h4>
+                      <p>Hands-on community training so residents gain skills in installing and
+                        maintaining the walls, while learning the environmental benefits of green
+                        infrastructure — turning homes into living walls rather than delivering a
+                        one-off intervention.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Results</h4>
+                      <ul>
+                        <li>30 households benefit directly.</li>
+                        <li>Over 150 individuals engaged through education and outreach.</li>
+                        <li>Indirect impact reaching up to 500 community members.</li>
+                        <li>Top 3 of 80+ entries at Habitat Youth Solutions 2025; USD 4,000 grant won.</li>
+                      </ul>
+                    </div>
+                    <div class="detail-block">
+                      <h4>My role</h4>
+                      <p>Project member, working under project leads Alexandra Taladua and
+                        Ginger Swa alongside eight other members.</p>
+                    </div>
+                    <!-- Note: the published project card spells her name "Annika Diaz De Vera".
+                         That is the organization's typo on their own graphic, not a site error. -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-          <figure class="gallery-item reveal" style="--d:.08s">
-            <button class="figure-frame" type="button"
-                    data-lightbox-src="assets/img/devint-leap-2026.jpg"
-                    data-lightbox-caption="LEAP 2026 — DLSU Development Initiative">
-              <img src="assets/img/devint-leap-2026.jpg" alt="Development Initiative officers at LEAP 2026, standing behind the DEVINT letters">
+          <!-- 04 · HANDS & HEARTS -------------------------------------------- -->
+          <article class="case reveal" id="hands-and-hearts" data-category="comms">
+            <button class="case__media" type="button"
+                    data-lightbox-src="assets/img/habitat-hands-and-hearts.jpg"
+                    data-lightbox-caption="Hands &amp; Hearts: HFH Chapters Networking Initiative, 29 March 2025">
+              <img src="assets/img/habitat-hands-and-hearts.jpg" width="750" height="928" loading="lazy"
+                   alt="Hands and Hearts event poster for a Habitat for Humanity chapters networking initiative on 29 March 2025">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>06</b> <span>DLSU Development Initiative · LEAP 2026</span></p>
-              <h3 class="gallery-title">University Linkages &amp; Recruitment</h3>
-              <p class="gallery-desc">
-                Representing Development Initiative at LEAP — part of the public
-                engagement and recruitment work I lead as Vice President for University
-                Linkages, alongside building the organisation&rsquo;s internal and external
-                partner databases.
+            <div class="case__body">
+              <p class="case__tag">Communications</p>
+              <h2 class="case__title">Hands &amp; Hearts</h2>
+              <p class="case__org">Habitat for Humanity — Green Chapter · March 2025</p>
+              <p class="case__outcome">
+                Led the IMC content for a networking initiative that brought three university
+                Habitat chapters into one program.
               </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Stakeholder Engagement</li>
-                <li class="tag">Recruitment</li>
+              <ul class="case__skills">
+                <li>IMC planning</li>
+                <li>Copywriting</li>
+                <li>Event facilitation</li>
               </ul>
-            </figcaption>
-          </figure>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-hands">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-hands">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>A 2.5-hour event on 29 March 2025 at De La Salle University Manila blending
+                        learning and networking. The first 90 minutes covered housing, building and
+                        volunteer management; the final hour connected the HFH Blue, UPD and Green
+                        chapters to share insights and plan future collaboration.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>My role</h4>
+                      <p>As Assistant Vice President for Publications and Promotions I led, managed
+                        and created the content falling under the event&rsquo;s IMC wing, and helped
+                        facilitate and execute the event proper.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Collaborators</h4>
+                      <p>Habitat for Humanity Philippines chapters at DLSU, UPD and Ateneo, under
+                        the DLSU Council of Student Organizations.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Skills demonstrated</h4>
+                      <p>Integrated marketing communications planning, copywriting and content
+                        production, and live event facilitation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-          <figure class="gallery-item reveal" style="--d:.16s">
-            <button class="figure-frame" type="button"
-                    data-lightbox-src="assets/img/archers-general-assembly.jpg"
-                    data-lightbox-caption="Archers Network Term 1 General Assembly">
-              <img src="assets/img/archers-general-assembly.jpg" alt="Archers Network Term 1 General Assembly group photo of the full membership">
+          <!-- 05 · LSDP PLAY DAY --------------------------------------------- -->
+          <article class="case reveal" id="lsdp" data-category="civic" style="--d:60ms">
+            <button class="case__media" type="button"
+                    data-lightbox-src="assets/img/englicom-lsdp-play-day.jpg"
+                    data-lightbox-caption="LSDP: Play Day, 12 July 2025 — DLSU ENGLICOM">
+              <img src="assets/img/englicom-lsdp-play-day.jpg" width="1024" height="1280" loading="lazy"
+                   alt="LSDP Play Day thank-you poster showing volunteers with a child at the day care centre">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>07</b> <span>DLSU Archers Network</span></p>
-              <h3 class="gallery-title">Term 1 General Assembly</h3>
-              <p class="gallery-desc">
-                The publication&rsquo;s term-opening assembly — the kind of engagement and
-                team-building event I plan and execute as Human Resources Department
-                Head, alongside managing staffer membership across their time in the
-                organisation.
+            <div class="case__body">
+              <p class="case__tag">Civic Engagement</p>
+              <h2 class="case__title">LSDP: Play Day</h2>
+              <p class="case__org">DLSU ENGLICOM · 12 July 2025</p>
+              <p class="case__outcome">
+                A civic activity for Little Stars Day Care in Plaridel, Bulacan — one of
+                ENGLICOM&rsquo;s partner beneficiaries.
               </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Human Resources</li>
-                <li class="tag">Team Building</li>
+              <ul class="case__skills">
+                <li>Civic engagement</li>
+                <li>Event planning</li>
               </ul>
-            </figcaption>
-          </figure>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-lsdp">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-lsdp">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>A morning programme run on site at Little Stars Day Care in Plaridel,
+                        Bulacan — a partner beneficiary ENGLICOM works with across terms rather
+                        than a single outreach visit.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>My role</h4>
+                      <p>Held during my term as Assistant Vice President for Civics, the role
+                        responsible for planning and executing civic events for the
+                        organization&rsquo;s partner beneficiaries.</p>
+                    </div>
+                    <!-- REPLACE (optional): what the children did on the day, and how many
+                         volunteers and beneficiaries took part. -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- ── C · INTERNSHIP ──────────────────────────────────────────────────── -->
-    <section class="band">
-      <div class="shell">
-        <div class="band-head reveal">
-          <span class="band-index">C / Internship</span>
-          <h2 class="band-title">Philippine Chamber of Commerce and Industry</h2>
-          <p class="band-note">
-            Advocacy, Research and Corporate Communications Department ·
-            November 2025 – February 2026.
-          </p>
-        </div>
-
-        <div class="gallery">
-
-          <figure class="gallery-item reveal">
-            <button class="figure-frame" type="button"
+          <!-- 06 · PCCI — ARCC ----------------------------------------------- -->
+          <article class="case reveal" id="pcci" data-category="internship" style="--d:120ms">
+            <button class="case__media" type="button"
                     data-lightbox-src="assets/img/pcci-office.jpg"
                     data-lightbox-caption="Philippine Chamber of Commerce and Industry — ARCC department">
-              <img src="assets/img/pcci-office.jpg" alt="Group photo at the Philippine Chamber of Commerce and Industry office">
+              <img src="assets/img/pcci-office.jpg" width="854" height="641" loading="lazy"
+                   alt="Anika with colleagues at the Philippine Chamber of Commerce and Industry office">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>W/01</b> <span>PCCI · Nov 2025 – Feb 2026</span></p>
-              <h3 class="gallery-title">Advocacy, Research &amp; Corporate Communications</h3>
-              <p class="gallery-desc">
-                My internship with PCCI&rsquo;s ARCC department — writing press releases and
-                messages on behalf of organisational representatives, and taking part in
-                internal, organisation-wide meetings.
+            <div class="case__body">
+              <p class="case__tag">Internship</p>
+              <h2 class="case__title">Advocacy, Research &amp; Corporate Communications</h2>
+              <p class="case__org">Philippine Chamber of Commerce and Industry · Nov 2025 – Feb 2026</p>
+              <p class="case__outcome">
+                Wrote press releases and messages issued on behalf of organizational
+                representatives.
               </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Corporate Communications</li>
-                <li class="tag">Copywriting</li>
+              <ul class="case__skills">
+                <li>Corporate communications</li>
+                <li>Copywriting</li>
+                <li>Research</li>
               </ul>
-            </figcaption>
-          </figure>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-pcci">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-pcci">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>A four-month internship with PCCI&rsquo;s Advocacy, Research and Corporate
+                        Communications department — the Chamber&rsquo;s national voice to its member
+                        businesses and partners.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Responsibilities</h4>
+                      <ul>
+                        <li>Wrote press releases and messages on behalf of organizational representatives.</li>
+                        <li>Participated in internal, organization-wide meetings concerning the department.</li>
+                        <li>Attended and took notes during Official Business meetings with PCCI&rsquo;s partners.</li>
+                      </ul>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Skills demonstrated</h4>
+                      <p>Writing in an institutional voice, meeting documentation, and working
+                        alongside senior representatives in a national business organization.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-          <figure class="gallery-item reveal" style="--d:.08s">
-            <button class="figure-frame" type="button"
+          <!-- 07 · PCCI — PARTNER ENGAGEMENT --------------------------------- -->
+          <article class="case reveal" id="pcci-partners" data-category="internship">
+            <button class="case__media" type="button"
                     data-lightbox-src="assets/img/pcci-partner-engagement.jpg"
                     data-lightbox-caption="Partner engagement — Philippine Chamber of Commerce and Industry">
-              <img src="assets/img/pcci-partner-engagement.jpg" alt="Anika with PCCI colleagues at an industry event">
+              <img src="assets/img/pcci-partner-engagement.jpg" width="1280" height="720" loading="lazy"
+                   alt="Anika with PCCI colleagues at an industry event">
             </button>
-            <figcaption class="gallery-caption">
-              <p class="gallery-kicker"><b>W/02</b> <span>PCCI · Nov 2025 – Feb 2026</span></p>
-              <h3 class="gallery-title">Partner Engagement</h3>
-              <p class="gallery-desc">
-                Attending and taking notes at Official Business meetings with PCCI&rsquo;s
-                partners — the research and stakeholder side of the department&rsquo;s work.
+            <div class="case__body">
+              <p class="case__tag">Internship</p>
+              <h2 class="case__title">Partner Engagement</h2>
+              <p class="case__org">Philippine Chamber of Commerce and Industry · Nov 2025 – Feb 2026</p>
+              <p class="case__outcome">
+                Attended and documented Official Business meetings with the Chamber&rsquo;s
+                partners.
               </p>
-              <ul class="tag-row" style="margin-top:.9rem">
-                <li class="tag">Stakeholder Engagement</li>
-                <li class="tag">Research</li>
+              <ul class="case__skills">
+                <li>Stakeholder engagement</li>
+                <li>Research</li>
               </ul>
-            </figcaption>
-          </figure>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-pcci-partners">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-pcci-partners">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>The stakeholder-facing half of the ARCC internship: sitting in on Official
+                        Business meetings between the Chamber and its partner organizations, and
+                        producing the notes the department worked from afterwards.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Skills demonstrated</h4>
+                      <p>Listening and documenting accurately in a professional setting, and
+                        representing a department in front of external partners.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 08 · ARCHERS GENERAL ASSEMBLY ---------------------------------- -->
+          <article class="case reveal" id="archers-ga" data-category="hr" style="--d:60ms">
+            <button class="case__media" type="button"
+                    data-lightbox-src="assets/img/archers-general-assembly.jpg"
+                    data-lightbox-caption="Archers Network Term 1 General Assembly">
+              <img src="assets/img/archers-general-assembly.jpg" width="1536" height="1536" loading="lazy"
+                   alt="Archers Network Term 1 General Assembly group photo of the full membership">
+            </button>
+            <div class="case__body">
+              <p class="case__tag">Human Resources</p>
+              <h2 class="case__title">Term 1 General Assembly</h2>
+              <p class="case__org">DLSU Archers Network · HR Department Head</p>
+              <p class="case__outcome">
+                The publication&rsquo;s term-opening assembly — the engagement work the HR
+                department exists to run.
+              </p>
+              <ul class="case__skills">
+                <li>Human resources</li>
+                <li>Team building</li>
+                <li>Event planning</li>
+              </ul>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-archers">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-archers">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>Archers Network opens each term with a general assembly that brings the
+                        whole membership together — the anchor event for staffer engagement across
+                        the term that follows.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>My role</h4>
+                      <p>As Human Resources Department Head I plan and execute events that build
+                        staffers&rsquo; work ethic, welfare, engagement and involvement, and manage
+                        membership status, grades and records across their time in the
+                        organization.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 09 · DEVINT — LEAP -------------------------------------------- -->
+          <article class="case reveal" id="devint" data-category="events" style="--d:120ms">
+            <button class="case__media" type="button"
+                    data-lightbox-src="assets/img/devint-leap-2026.jpg"
+                    data-lightbox-caption="LEAP 2026 — DLSU Development Initiative">
+              <img src="assets/img/devint-leap-2026.jpg" width="880" height="700" loading="lazy"
+                   alt="Development Initiative officers at LEAP 2026 standing behind the DEVINT letters">
+            </button>
+            <div class="case__body">
+              <p class="case__tag">Events</p>
+              <h2 class="case__title">University Linkages at LEAP</h2>
+              <p class="case__org">DLSU Development Initiative · VP for University Linkages</p>
+              <p class="case__outcome">
+                Public engagement and recruitment for the organization, backed by the partner
+                databases I built.
+              </p>
+              <ul class="case__skills">
+                <li>Stakeholder engagement</li>
+                <li>Recruitment</li>
+                <li>Google Workspace</li>
+              </ul>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-devint">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-devint">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>Representing Development Initiative at LEAP, part of the public engagement
+                        and recruitment work the University Linkages portfolio covers among
+                        students, members and ambassadors.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>What I built</h4>
+                      <p>The organization&rsquo;s internal and external databases, so communication,
+                        linking and collaboration with organizations inside and outside DLSU no
+                        longer restarts from scratch each term.</p>
+                    </div>
+                    <div class="detail-block">
+                      <h4>Also in this role</h4>
+                      <p>Managing online campaigns on careers in Development Studies and on the
+                        Philippines&rsquo; progress toward the UN Sustainable Development Goals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 · EVENT OPERATIONS ------------------------------------------ -->
+          <article class="case reveal" id="event-ops" data-category="events">
+            <button class="case__media" type="button"
+                    data-lightbox-src="assets/img/englicom-event-operations.jpg"
+                    data-lightbox-caption="Event operations — DLSU ENGLICOM">
+              <img src="assets/img/englicom-event-operations.jpg" width="730" height="486" loading="lazy"
+                   alt="Organisers at the registration desk during an ENGLICOM event">
+            </button>
+            <div class="case__body">
+              <p class="case__tag">Events</p>
+              <h2 class="case__title">Event Operations</h2>
+              <p class="case__org">DLSU ENGLICOM</p>
+              <p class="case__outcome">
+                Registration and front-of-house — the half of event planning that decides
+                whether the day runs.
+              </p>
+              <ul class="case__skills">
+                <li>Operations</li>
+                <li>Event planning</li>
+              </ul>
+              <div class="case__foot">
+                <button class="btn btn--outline btn--sm" type="button" data-case-toggle aria-expanded="false" aria-controls="d-ops">
+                  <span class="btn__label">View project</span> <span class="btn__arrow" aria-hidden="true">↓</span>
+                </button>
+              </div>
+              <div class="case__detail" id="d-ops">
+                <div>
+                  <div class="case__detail-inner">
+                    <div class="detail-block">
+                      <h4>Overview</h4>
+                      <p>Running the registration desk and front-of-house during an ENGLICOM event —
+                        managing arrivals, records and attendee flow while the programme ran.</p>
+                    </div>
+                    <!-- REPLACE (optional): name the event this was, and your role on the day.
+                         Photo credit on the original image: Carl Matthew Sia, Archers Network. -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ── D · REFERENCES ──────────────────────────────────────────────────── -->
-    <section class="band">
+    <section class="section" style="padding-top:0">
       <div class="shell">
-        <div class="band-head reveal">
-          <span class="band-index">D / References</span>
-          <h2 class="band-title">References</h2>
-          <p class="band-note">
-            Contact details are kept off this public page — recruiters can request them.
+        <div class="cta reveal">
+          <h2>Want the detail behind any of these?</h2>
+          <p class="cta__lede">
+            Happy to talk through any project — what it took, what I would do differently,
+            and what came out of it.
           </p>
+          <div class="cta__row">
+            <a class="btn btn--primary" href="contact.html">
+              Get in touch <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--outline" href="assets/docs/resume.pdf" download>
+              Download Résumé <span class="btn__arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
         </div>
-
-        <div class="card-grid">
-          <article class="card reveal">
-            <p class="card-kicker">R / 01</p>
-            <h3 class="card-name">Edwin Santiago</h3>
-            <p class="card-role">Professor<br>De La Salle University</p>
-            <dl class="card-meta">
-              <div><dt class="visually-hidden">City</dt><dd>Manila, Philippines</dd></div>
-              <div><dt class="visually-hidden">Contact</dt><dd>Contact details available on request</dd></div>
-            </dl>
-          </article>
-
-          <article class="card reveal" style="--d:.08s">
-            <p class="card-kicker">R / 02</p>
-            <h3 class="card-name">Ralph Salazar</h3>
-            <p class="card-role">Faculty Adviser<br>Archers Network</p>
-            <dl class="card-meta">
-              <div><dt class="visually-hidden">City</dt><dd>Manila, Philippines</dd></div>
-              <div><dt class="visually-hidden">Contact</dt><dd>Contact details available on request</dd></div>
-            </dl>
-          </article>
-        </div>
-
-        <!-- Letters of recommendation / testimonials are marked "if available" in the
-             requirement. Nothing was supplied, so the section is left out rather than
-             faked. If you get one, tell me and I will add it back. -->
       </div>
     </section>
 
@@ -378,26 +654,42 @@
 
   <footer class="site-footer">
     <div class="shell">
-      <div class="footer-grid">
-        <p class="footer-title">Let&rsquo;s work<br><em>together.</em></p>
-        <ul class="footer-links">
-          <li><a href="mailto:anika_diazderivera@dlsu.edu.ph">anika_diazderivera@dlsu.edu.ph</a></li>
-          <li><a href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="about.html">About Me</a></li>
-        </ul>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <h2>Anika Diaz de Rivera</h2>
+          <p class="site-footer__note">
+            Development Studies &amp; Marketing Strategy at De La Salle University.
+            Open to internships and entry-level opportunities.
+          </p>
+        </div>
+        <div>
+          <p class="footer-nav__title">Pages</p>
+          <ul class="footer-nav">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="about.html">Experience</a></li>
+            <li><a href="portfolio.html">Selected Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-nav__title">Elsewhere</p>
+          <ul class="footer-nav">
+            <li><a href="mailto:anika_diazderivera@dlsu.edu.ph">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="assets/docs/resume.pdf" download>Résumé (PDF)</a></li>
+          </ul>
+        </div>
       </div>
       <div class="colophon">
-        <span>© <span data-year>2026</span> Anika Diaz de Rivera</span>
-        <span>Career e-Portfolio · SAS3000</span>
-        <a class="version-switch" href="v2/">Version B — institutional <span aria-hidden="true">↗</span></a>
+        <span>© <span data-year>2026</span> Anika Diaz de Rivera · Career e-Portfolio</span>
       </div>
     </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Work sample viewer" hidden>
-    <button class="lightbox-close" type="button" data-lightbox-close>Close ✕</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project image viewer" hidden>
+    <button class="lightbox__close" type="button" data-lightbox-close>Close ✕</button>
     <img alt="">
-    <p class="lightbox-caption"></p>
+    <p class="lightbox__caption"></p>
   </div>
 
   <script src="main.js"></script>

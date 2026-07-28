@@ -3,80 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anika Diaz de Rivera — Career e-Portfolio</title>
-  <meta name="description" content="Career e-Portfolio of Anika Diaz de Rivera — Development Studies and Marketing Strategy, De La Salle University Manila.">
+  <title>Anika Diaz de Rivera — Development &amp; Stakeholder Engagement</title>
+  <meta name="description" content="Portfolio of Anika Diaz de Rivera — Development Studies student at De La Salle University working across project management, human resources, civic engagement, communications and stakeholder partnerships.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anika Diaz de Rivera — Development &amp; Stakeholder Engagement">
+  <meta property="og:description" content="Building programs, partnerships, and systems that create meaningful impact.">
+  <meta property="og:url" content="https://vmgax.github.io/career-portfolio/">
+  <meta property="og:image" content="https://vmgax.github.io/career-portfolio/assets/img/anika-portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ── MASTHEAD — identical on all 4 pages. Edit here, then copy into the others. ── -->
-  <header class="masthead">
-    <div class="shell masthead-inner">
-      <a class="wordmark" href="index.html">Anika Diaz de Rivera<span></span></a>
+  <!-- ── HEADER — identical on all four pages ─────────────────────────── -->
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">AD</span>
+        <span class="brand__full">Anika Diaz de Rivera</span>
+        <span class="brand__short">Anika D.</span>
+      </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>Menu
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="index.html" aria-current="page">Overview</a></li>
+          <li><a href="about.html">Experience</a></li>
+          <li><a href="portfolio.html">Selected Work</a></li>
+          <li><a href="about.html#capabilities">Skills</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <a class="btn btn--primary btn--sm" href="assets/docs/resume.pdf" download>
+          Résumé <span class="btn__arrow" aria-hidden="true">↓</span>
+        </a>
       </nav>
     </div>
   </header>
 
   <main id="main">
 
-    <!-- ── HERO ────────────────────────────────────────────────────────────── -->
+    <!-- ── 1 · HERO ──────────────────────────────────────────────────────── -->
     <section class="hero">
-      <div class="shell">
-        <div class="hero-grid">
-          <div>
-            <p class="hero-eyebrow mono load-in" style="--d:.05s">Career e-Portfolio · SAS3000</p>
+      <div class="shell hero__grid">
+        <div>
+          <p class="eyebrow enter" style="--d:40ms">Development Studies · Marketing Strategy</p>
 
-            <h1 class="hero-title load-in" style="--d:.15s">
-              Anika
-              <em>Diaz de Rivera</em>
-            </h1>
+          <h1 class="hero__title enter" style="--d:120ms">
+            Building programs, partnerships, and systems that create meaningful impact.
+          </h1>
 
-            <!-- REPLACE (optional): if you have a target role or industry, name it here -->
-            <p class="hero-role load-in" style="--d:.25s">Development Studies · Marketing Strategy</p>
+          <p class="lede hero__lede enter" style="--d:200ms">
+            I am a Development Studies student at De La Salle University working across
+            civic engagement, human resources, communications, project management and
+            stakeholder partnerships — leading events, building the systems behind them,
+            and keeping partners and people connected to the work.
+          </p>
 
-            <p class="hero-lede load-in" style="--d:.33s">
-              An undergraduate student of Development Studies with a minor in Marketing
-              Strategy at De La Salle University — working across human resources, civic
-              engagement, communications and stakeholder partnerships.
-            </p>
-
-            <div class="hero-actions load-in" style="--d:.41s">
-              <a class="btn btn-primary" href="portfolio.html">
-                View Portfolio <span class="btn-arrow" aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn-ghost" href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/" target="_blank" rel="noopener">
-                LinkedIn Profile <span class="btn-arrow" aria-hidden="true">↗</span>
-              </a>
-            </div>
+          <div class="hero__actions enter" style="--d:280ms">
+            <a class="btn btn--primary" href="portfolio.html">
+              View Selected Work <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--outline" href="assets/docs/resume.pdf" download>
+              Download Résumé <span class="btn__arrow" aria-hidden="true">↓</span>
+            </a>
+            <a class="icon-link" href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/"
+               target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in a new tab)">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.28 8h4.44v14H.28V8zm7.55 0h4.26v1.92h.06c.6-1.13 2.05-2.32 4.22-2.32 4.51 0 5.34 2.97 5.34 6.83V22h-4.44v-6.68c0-1.6-.03-3.65-2.22-3.65-2.23 0-2.57 1.74-2.57 3.53V22H7.83V8z"/>
+              </svg>
+            </a>
           </div>
-
-          <figure class="hero-figure load-in" style="--d:.5s">
-            <img src="assets/img/anika-portrait.jpg" alt="Portrait of Anika Diaz de Rivera standing on a hillside overlooking farmland">
-            <figcaption>Fig. 01 — Portrait</figcaption>
-          </figure>
         </div>
 
-        <dl class="hero-meta load-in" style="--d:.6s">
+        <figure class="hero__figure enter" style="--d:360ms">
+          <img src="assets/img/anika-portrait.jpg" width="2048" height="1365"
+               alt="Anika Diaz de Rivera standing outdoors on a hillside overlooking farmland"
+               fetchpriority="high">
+          <figcaption class="hero__caption">Manila, Philippines · BA Development Studies, Class of 2026</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── 2 · PROFESSIONAL SNAPSHOT ─────────────────────────────────────── -->
+    <section class="section" style="padding-block:0" aria-label="Professional snapshot">
+      <div class="shell">
+        <dl class="facts reveal">
           <div>
-            <dt>Degree Program</dt>
+            <dt>Degree</dt>
             <dd>BA Development Studies</dd>
           </div>
           <div>
@@ -84,120 +106,587 @@
             <dd>Marketing Strategy</dd>
           </div>
           <div>
-            <dt>Institution</dt>
+            <dt>University</dt>
             <dd>De La Salle University</dd>
           </div>
           <div>
-            <dt>Based In</dt>
+            <dt>Based in</dt>
             <dd>Manila, Philippines</dd>
+          </div>
+          <div>
+            <dt>Availability</dt>
+            <dd>Open to internships &amp; entry-level roles</dd>
           </div>
         </dl>
       </div>
     </section>
 
-    <!-- ── 01 SELF-INTRODUCTION ────────────────────────────────────────────── -->
-    <section class="band" id="about">
-      <div class="shell band-grid">
-        <div class="band-rail reveal">
-          <span class="band-index">01 / Self-Introduction</span>
-          <h2 class="band-title">Hello</h2>
-          <p class="band-note">Who I am and where I am studying.</p>
+    <!-- ── 3 · SELECTED IMPACT ───────────────────────────────────────────── -->
+    <section class="section" id="impact">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected impact</p>
+          <h2>What the work has produced</h2>
+          <p class="lede">Four outcomes that show how I work — across advocacy, operations,
+            partnerships and people.</p>
         </div>
 
-        <div class="prose reveal" style="--d:.1s">
-          <p class="prose-lead">
-            Hello! I am Anika Diaz de Rivera. Currently, I am an undergraduate student
-            taking a Bachelor of Arts in Development Studies and a minor in Marketing
-            Strategy at De La Salle University in Manila, Philippines.
-          </p>
+        <div class="impact-grid">
+          <article class="impact reveal">
+            <p class="impact__figure">Top 3 <small>of 80+</small></p>
+            <p class="impact__label">Habitat Youth Solutions 2025</p>
+            <p class="impact__body">
+              Contributed as a project member to <em>Re-Leaf the Heat!</em>, an urban greening
+              initiative placing vertical green walls on 30 homes in Metro Manila. The entry
+              placed in the Top 3 of more than 80 submissions and won a USD 4,000 grant.
+            </p>
+          </article>
 
-          <p>
-            My work sits at the meeting point of project management, event planning,
-            advocacy and human resources — built across a student publication, three
-            student organisations, a volunteer chapter, and an internship with the
-            Philippine Chamber of Commerce and Industry. I am experienced in managing
-            and creating efficiency tools and systems using Google Workspace, with an
-            adaptable skill set across corporate, advocacy and institutional settings.
-          </p>
+          <article class="impact reveal" style="--d:80ms">
+            <p class="impact__figure">10 <small>partners</small></p>
+            <p class="impact__label">Flagship conference</p>
+            <p class="impact__body">
+              Led <em>ENGLIVision: Business Beyond Profit</em> as Project Head, from planning
+              through execution — a capacity-audience conference backed by ten co-presenting
+              partners and sponsors.
+            </p>
+          </article>
 
-          <p>
-            What I am working toward is a place in something genuinely great — an
-            institution like the United Nations, where the scale matches the ambition. I
-            want to serve the community I come from and leave behind an initiative that
-            outlasts my involvement in it.
-          </p>
+          <article class="impact reveal" style="--d:160ms">
+            <p class="impact__figure">2 <small>databases</small></p>
+            <p class="impact__label">Institutional coordination</p>
+            <p class="impact__body">
+              Built Development Initiative&rsquo;s internal and external databases so the
+              organization could communicate, link and collaborate with partners inside and
+              outside De La Salle University without rebuilding contacts each term.
+            </p>
+          </article>
 
-          <blockquote class="pull-quote">
-            Specialty in event planning — formal, informal, and advocacy-oriented.
-            <cite>— Anika Diaz de Rivera</cite>
-          </blockquote>
+          <article class="impact reveal" style="--d:240ms">
+            <p class="impact__figure">5 <small>organizations</small></p>
+            <p class="impact__label">People and organization</p>
+            <p class="impact__body">
+              As Human Resources Department Head at DLSU Archers Network I manage membership
+              records, welfare and engagement — one of twelve positions held across five
+              organizations since 2024.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ── 02 CONTENTS ─────────────────────────────────────────────────────── -->
-    <section class="band" id="contents">
-      <div class="shell band-grid">
-        <div class="band-rail reveal">
-          <span class="band-index">02 / Contents</span>
-          <h2 class="band-title">The portfolio</h2>
-          <p class="band-note">Everything else lives on its own page.</p>
+    <!-- ── 4 · FEATURED WORK ─────────────────────────────────────────────── -->
+    <section class="section section--tint" id="work">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Featured work</p>
+          <h2>Four projects worth a closer look</h2>
+          <p class="lede">The full set — including academic research and organization
+            work — lives on the Selected Work page.</p>
         </div>
 
-        <div class="reveal" style="--d:.1s">
-          <ul class="index-list">
-            <li>
-              <a class="index-link" href="about.html">
-                <span class="index-num">01</span>
-                <span class="index-body">
-                  <span class="index-title">About Me</span>
-                  <span class="index-desc">LinkedIn, positions and experiences, résumé, and skills.</span>
+        <div class="work-list">
+
+          <article class="work reveal">
+            <div class="work__media">
+              <img src="assets/img/englicom-englivision.jpg" width="1024" height="1280" loading="lazy"
+                   alt="ENGLIVision: Business Beyond Profit thank-you poster showing a capacity audience behind the ENGLICOM letters">
+            </div>
+            <div>
+              <p class="work__kicker"><b>DLSU ENGLICOM</b> <span>Events · Advocacy</span></p>
+              <h3 class="work__title">ENGLIVision: Business Beyond Profit</h3>
+              <p class="work__summary">
+                ENGLICOM&rsquo;s flagship conference on business that serves more than profit.
+                I led it as Project Head — planning, partner line-up and execution on the day —
+                and it ran to a capacity audience.
+              </p>
+              <dl class="work__facts">
+                <div><dt>Role</dt><dd>Project Head</dd></div>
+                <div><dt>Skills</dt><dd>Event management · Partnerships · Project management</dd></div>
+              </dl>
+              <p class="work__outcome">Backed by 10 co-presenting partners and sponsors</p>
+              <p class="work__cta">
+                <a class="text-link" href="portfolio.html#englivision">
+                  View project <span aria-hidden="true">→</span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <article class="work reveal">
+            <div class="work__media">
+              <img src="assets/img/habitat-re-leaf-the-heat.jpg" width="750" height="745" loading="lazy"
+                   alt="Re-Leaf the Heat project card describing vertical green walls installed on 30 homes in Metro Manila">
+            </div>
+            <div>
+              <p class="work__kicker"><b>Habitat for Humanity — Green Chapter</b> <span>Civic engagement · 2025</span></p>
+              <h3 class="work__title">Re-Leaf the Heat!</h3>
+              <p class="work__summary">
+                An urban greening initiative against extreme heat in Metro Manila&rsquo;s informal
+                settlements, installing vertical green walls on 30 homes. It directly benefits
+                30 households and engages over 150 individuals, with indirect impact reaching
+                up to 500 community members.
+              </p>
+              <dl class="work__facts">
+                <div><dt>Role</dt><dd>Project member</dd></div>
+                <div><dt>Skills</dt><dd>Project development · Climate resilience · Community engagement</dd></div>
+              </dl>
+              <p class="work__outcome">Top 3 of 80+ entries · USD 4,000 grant won</p>
+              <p class="work__cta">
+                <a class="text-link" href="portfolio.html#re-leaf">
+                  View project <span aria-hidden="true">→</span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <article class="work reveal">
+            <div class="work__media">
+              <img src="assets/img/habitat-hands-and-hearts.jpg" width="750" height="928" loading="lazy"
+                   alt="Hands and Hearts event poster — a Habitat for Humanity chapters networking initiative held 29 March 2025">
+            </div>
+            <div>
+              <p class="work__kicker"><b>Habitat for Humanity — Green Chapter</b> <span>Communications · March 2025</span></p>
+              <h3 class="work__title">Hands &amp; Hearts</h3>
+              <p class="work__summary">
+                A networking initiative bringing the Habitat for Humanity Blue, UPD and Green
+                chapters together around housing, building and volunteer management. I led,
+                managed and created the content under the event&rsquo;s IMC wing and helped
+                facilitate and execute the event proper.
+              </p>
+              <dl class="work__facts">
+                <div><dt>Role</dt><dd>AVP for Publications and Promotions</dd></div>
+                <div><dt>Skills</dt><dd>IMC planning · Copywriting · Event facilitation</dd></div>
+              </dl>
+              <p class="work__outcome">Brought 3 university chapters into one program</p>
+              <p class="work__cta">
+                <a class="text-link" href="portfolio.html#hands-and-hearts">
+                  View project <span aria-hidden="true">→</span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <article class="work reveal">
+            <div class="work__media">
+              <img src="assets/img/pcci-office.jpg" width="854" height="641" loading="lazy"
+                   alt="Anika with colleagues at the Philippine Chamber of Commerce and Industry office">
+            </div>
+            <div>
+              <p class="work__kicker"><b>Philippine Chamber of Commerce and Industry</b> <span>Internship · Nov 2025 – Feb 2026</span></p>
+              <h3 class="work__title">Advocacy, Research &amp; Corporate Communications</h3>
+              <p class="work__summary">
+                My internship with PCCI&rsquo;s ARCC department: writing press releases and
+                messages on behalf of organizational representatives, and attending Official
+                Business meetings with the Chamber&rsquo;s partners.
+              </p>
+              <dl class="work__facts">
+                <div><dt>Role</dt><dd>Intern, ARCC Department</dd></div>
+                <div><dt>Skills</dt><dd>Corporate communications · Copywriting · Stakeholder engagement</dd></div>
+              </dl>
+              <p class="work__outcome">First professional role outside the university</p>
+              <p class="work__cta">
+                <a class="text-link" href="portfolio.html#pcci">
+                  View project <span aria-hidden="true">→</span>
+                </a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5 · EXPERIENCE OVERVIEW ───────────────────────────────────────── -->
+    <section class="section" id="experience">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Five organizations, twelve positions</h2>
+          <p class="lede">Expand an organization to see the roles held there. The full
+            profile — education, awards and tools — is on the Experience page.</p>
+        </div>
+
+        <div class="timeline reveal" data-accordion>
+
+          <article class="tl-item">
+            <h3 class="tl-heading">
+              <button class="tl-head" type="button" aria-expanded="false" aria-controls="tl-pcci">
+                <span>
+                  <span class="tl-org">
+                    <span class="tl-name">Philippine Chamber of Commerce and Industry</span>
+                    <span class="tl-kind">Internship</span>
+                  </span>
+                  <span class="tl-summary">Nov 2025 – Feb 2026 · 1 position</span>
                 </span>
-                <span class="index-arrow" aria-hidden="true">→</span>
-              </a>
-            </li>
-            <li>
-              <a class="index-link" href="portfolio.html">
-                <span class="index-num">02</span>
-                <span class="index-body">
-                  <span class="index-title">Portfolio</span>
-                  <span class="index-desc">Academic work samples, organisation and internship work, references.</span>
+                <span class="tl-toggle" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="tl-panel" id="tl-pcci">
+              <div>
+                <div class="tl-roles">
+                  <div class="tl-role">
+                    <p class="tl-dates">Nov 2025 – Feb 2026</p>
+                    <div>
+                      <h4>Intern, Advocacy, Research and Corporate Communications</h4>
+                      <ul class="tl-points">
+                        <li>Wrote press releases and messages issued on behalf of organizational representatives.</li>
+                        <li>Attended and took notes at Official Business meetings with the Chamber&rsquo;s partners.</li>
+                        <li>Participated in internal, organization-wide meetings for the department.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <h3 class="tl-heading">
+              <button class="tl-head" type="button" aria-expanded="false" aria-controls="tl-archers">
+                <span>
+                  <span class="tl-org">
+                    <span class="tl-name">DLSU Archers Network</span>
+                    <span class="tl-kind">Student publication</span>
+                  </span>
+                  <span class="tl-summary">Mar 2025 – Present · 2 positions</span>
                 </span>
-                <span class="index-arrow" aria-hidden="true">→</span>
-              </a>
-            </li>
-            <li>
-              <a class="index-link" href="contact.html">
-                <span class="index-num">03</span>
-                <span class="index-body">
-                  <span class="index-title">Contact</span>
-                  <span class="index-desc">How to reach me.</span>
+                <span class="tl-toggle" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="tl-panel" id="tl-archers">
+              <div>
+                <div class="tl-roles">
+                  <div class="tl-role">
+                    <!-- CHECK: the CV says Sep 2025; the e-portfolio document says Aug 2025. Using Aug 2025. -->
+                    <p class="tl-dates">Aug 2025 – Present</p>
+                    <div>
+                      <h4>Human Resources Department Head</h4>
+                      <ul class="tl-points">
+                        <li>Plans and executes events that build staffers&rsquo; work ethic, welfare, engagement and involvement in the organization.</li>
+                        <li>Manages staffer membership end to end — status, grades and related records.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tl-role">
+                    <p class="tl-dates">Mar 2025 – Aug 2025</p>
+                    <div>
+                      <h4>Human Resources Associate</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <h3 class="tl-heading">
+              <button class="tl-head" type="button" aria-expanded="false" aria-controls="tl-englicom">
+                <span>
+                  <span class="tl-org">
+                    <span class="tl-name">DLSU ENGLICOM</span>
+                    <span class="tl-kind">Student organization</span>
+                  </span>
+                  <span class="tl-summary">Jan 2024 – Present · 6 positions</span>
                 </span>
-                <span class="index-arrow" aria-hidden="true">→</span>
-              </a>
-            </li>
+                <span class="tl-toggle" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="tl-panel" id="tl-englicom">
+              <div>
+                <div class="tl-roles">
+                  <div class="tl-role">
+                    <p class="tl-dates">May 2025 – Present</p>
+                    <div>
+                      <h4>Assistant Vice President for Civics</h4>
+                      <ul class="tl-points">
+                        <li>Plans and executes civic events for partner beneficiaries — Little Stars Day Care in Plaridel, Bulacan, and the organization&rsquo;s sponsored scholars at Philippine Normal University.</li>
+                        <li>Served as Project Head for <em>ENGLIVision: Business Beyond Profit</em>, leading the flagship conference from planning through execution.</li>
+                        <li>Collected and signed student ambassadors for the public promotion of each event.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tl-role">
+                    <p class="tl-dates">Jan 2025 – Jul 2025</p>
+                    <div>
+                      <h4>Team Head, Fundraising Activity: Fun Run</h4>
+                      <p class="tl-context">Medical Mission 2025</p>
+                    </div>
+                  </div>
+                  <div class="tl-role">
+                    <!-- CHECK: source document reads "September 2025 – April 2025", which ends
+                         before it starts. Corrected to Sep 2024 – Apr 2025, the only reading
+                         that fits the academic year. Confirm this is right. -->
+                    <p class="tl-dates">Sep 2024 – Apr 2025</p>
+                    <div>
+                      <h4>Committee Coordinator for Civics</h4>
+                    </div>
+                  </div>
+                  <div class="tl-role">
+                    <p class="tl-dates">Nov 2024</p>
+                    <div>
+                      <h4>Assistant Team Head for Events</h4>
+                      <p class="tl-context">NEXUS 2024</p>
+                    </div>
+                  </div>
+                  <div class="tl-role">
+                    <p class="tl-dates">Apr 2024 – Jul 2024</p>
+                    <div>
+                      <h4>Assistant Team Head, Fundraising Activity: Movie</h4>
+                      <p class="tl-context">Medical Mission 2024</p>
+                    </div>
+                  </div>
+                  <div class="tl-role">
+                    <!-- CHECK: the CV calls this "Chinese New Year 2023"; the e-portfolio
+                         document dates it Jan–Feb 2024. Using 2024. -->
+                    <p class="tl-dates">Jan 2024 – Feb 2024</p>
+                    <div>
+                      <h4>Assistant Team Head for Public Relations</h4>
+                      <p class="tl-context">Chinese New Year 2024</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <h3 class="tl-heading">
+              <button class="tl-head" type="button" aria-expanded="false" aria-controls="tl-habitat">
+                <span>
+                  <span class="tl-org">
+                    <span class="tl-name">Habitat for Humanity — Green Chapter</span>
+                    <span class="tl-kind">Volunteer organization</span>
+                  </span>
+                  <span class="tl-summary">Jan 2025 – Present · 1 position</span>
+                </span>
+                <span class="tl-toggle" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="tl-panel" id="tl-habitat">
+              <div>
+                <div class="tl-roles">
+                  <div class="tl-role">
+                    <p class="tl-dates">Jan 2025 – Present</p>
+                    <div>
+                      <h4>Assistant Vice President for Publications and Promotions</h4>
+                      <ul class="tl-points">
+                        <li>Led and produced the content under the IMC wing of <em>Hands &amp; Hearts</em>, the HFH UPD × Ateneo × DLSU networking initiative, and helped execute the event proper.</li>
+                        <li>Writes and produces publication captions for term-long posting initiatives.</li>
+                        <li>Placed in the Top 3 of 80+ entries at Habitat Youth Solutions 2025 as a project member of <em>Re-Leaf the Heat!</em></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <h3 class="tl-heading">
+              <button class="tl-head" type="button" aria-expanded="false" aria-controls="tl-devint">
+                <span>
+                  <span class="tl-org">
+                    <span class="tl-name">DLSU Development Initiative</span>
+                    <span class="tl-kind">Student organization</span>
+                  </span>
+                  <span class="tl-summary">Oct 2024 – Present · 1 position</span>
+                </span>
+                <span class="tl-toggle" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="tl-panel" id="tl-devint">
+              <div>
+                <div class="tl-roles">
+                  <div class="tl-role">
+                    <p class="tl-dates">Oct 2024 – Present</p>
+                    <div>
+                      <h4>Vice President for University Linkages</h4>
+                      <ul class="tl-points">
+                        <li>Built the organization&rsquo;s internal and external databases for easier communication, linking and collaboration with organizations inside and outside DLSU.</li>
+                        <li>Manages online campaigns on careers in Development Studies and the Philippines&rsquo; progress toward the UN Sustainable Development Goals.</li>
+                        <li>Facilitates public engagement and promotion in the organization&rsquo;s recruitment among students, members and ambassadors.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6 · CAPABILITIES ──────────────────────────────────────────────── -->
+    <section class="section section--tint" id="skills">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Four areas I work in</h2>
+          <p class="lede">Grouped by what they are for, with where each one was actually
+            applied.</p>
+        </div>
+
+        <div class="cap-grid">
+          <article class="cap reveal">
+            <p class="cap__num">01</p>
+            <h3>Program &amp; Project Management</h3>
+            <p class="cap__body">
+              Running projects end to end — scoping, scheduling, coordinating teams and
+              delivering on the day. Applied as Project Head of ENGLIVision and as Team Head
+              for the Medical Mission 2025 Fun Run.
+            </p>
+            <ul class="cap__skills">
+              <li>Project management</li>
+              <li>Event planning</li>
+              <li>Strategic planning</li>
+            </ul>
+          </article>
+
+          <article class="cap reveal" style="--d:80ms">
+            <p class="cap__num">02</p>
+            <h3>People &amp; Organization</h3>
+            <p class="cap__body">
+              Managing membership, welfare and engagement so teams stay functional across a
+              term. Applied as Human Resources Department Head at DLSU Archers Network,
+              handling records, grades and team-building programs.
+            </p>
+            <ul class="cap__skills">
+              <li>Human resources</li>
+              <li>Leadership</li>
+              <li>Team building</li>
+            </ul>
+          </article>
+
+          <article class="cap reveal" style="--d:160ms">
+            <p class="cap__num">03</p>
+            <h3>Partnerships &amp; Civic Engagement</h3>
+            <p class="cap__body">
+              Opening and holding relationships with partners, beneficiaries and sponsors.
+              Applied as VP for University Linkages at Development Initiative and in civic
+              work with Little Stars Day Care and PNU scholars.
+            </p>
+            <ul class="cap__skills">
+              <li>Stakeholder engagement</li>
+              <li>Partnership development</li>
+              <li>Public relations</li>
+              <li>Civic engagement</li>
+            </ul>
+          </article>
+
+          <article class="cap reveal" style="--d:240ms">
+            <p class="cap__num">04</p>
+            <h3>Communications &amp; Digital Tools</h3>
+            <p class="cap__body">
+              Writing for organizations and building the systems that keep their information
+              usable. Applied in press releases at PCCI, IMC content for Hands &amp; Hearts,
+              and databases built in Google Workspace.
+            </p>
+            <ul class="cap__skills">
+              <li>Copywriting</li>
+              <li>Web content writing</li>
+              <li>Social media marketing</li>
+              <li>Google Workspace</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7 · CAREER DIRECTION ──────────────────────────────────────────── -->
+    <section class="section" id="direction">
+      <div class="shell direction">
+        <div class="reveal">
+          <p class="eyebrow">Career direction</p>
+          <h2>Where I want to work</h2>
+        </div>
+        <div class="reveal" style="--d:80ms">
+          <div class="prose">
+            <p>
+              I want to work inside institutions that do development, public service and
+              community impact at scale — development organizations, policy and advocacy
+              bodies, and the corporate and civic partnerships that fund and sustain them.
+            </p>
+            <p>
+              The through-line in my experience is making programs actually run: setting up
+              the systems, holding the partnerships, and looking after the people doing the
+              work. I want to keep doing that somewhere the outlasting matters more than the
+              launch.
+            </p>
+          </div>
+          <ul class="direction__list">
+            <li>Development and international organizations</li>
+            <li>Public service, policy and advocacy</li>
+            <li>Stakeholder engagement and partnerships</li>
+            <li>Corporate social responsibility and community impact</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 8 · CONTACT CTA ───────────────────────────────────────────────── -->
+    <section class="section" style="padding-top:0">
+      <div class="shell">
+        <div class="cta reveal">
+          <h2>Interested in working together?</h2>
+          <p class="cta__lede">
+            I am open to internships and entry-level opportunities in development,
+            communications and stakeholder engagement.
+          </p>
+          <div class="cta__row">
+            <a class="btn btn--primary" href="mailto:anika_diazderivera@dlsu.edu.ph">
+              Send an email <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--outline" href="contact.html">
+              Contact page <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--outline" href="assets/docs/resume.pdf" download>
+              Download Résumé <span class="btn__arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <div class="cta__meta">
+            <span><a href="mailto:anika_diazderivera@dlsu.edu.ph">anika_diazderivera@dlsu.edu.ph</a></span>
+            <span><a href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/" target="_blank" rel="noopener">LinkedIn</a></span>
+            <span>Manila, Philippines</span>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ── FOOTER — identical on all 4 pages. ──────────────────────────────── -->
+  <!-- ── FOOTER — identical on all four pages ─────────────────────────── -->
   <footer class="site-footer">
     <div class="shell">
-      <div class="footer-grid">
-        <p class="footer-title">Let&rsquo;s work<br><em>together.</em></p>
-        <ul class="footer-links">
-          <li><a href="mailto:anika_diazderivera@dlsu.edu.ph">anika_diazderivera@dlsu.edu.ph</a></li>
-          <li><a href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="portfolio.html">View Portfolio</a></li>
-        </ul>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <h2>Anika Diaz de Rivera</h2>
+          <p class="site-footer__note">
+            Development Studies &amp; Marketing Strategy at De La Salle University.
+            Open to internships and entry-level opportunities.
+          </p>
+        </div>
+        <div>
+          <p class="footer-nav__title">Pages</p>
+          <ul class="footer-nav">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="about.html">Experience</a></li>
+            <li><a href="portfolio.html">Selected Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-nav__title">Elsewhere</p>
+          <ul class="footer-nav">
+            <li><a href="mailto:anika_diazderivera@dlsu.edu.ph">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/anika-diaz-de-rivera-22b3412a9/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="assets/docs/resume.pdf" download>Résumé (PDF)</a></li>
+          </ul>
+        </div>
       </div>
       <div class="colophon">
-        <span>© <span data-year>2026</span> Anika Diaz de Rivera</span>
-        <span>Career e-Portfolio · SAS3000</span>
-        <a class="version-switch" href="v2/">Version B — institutional <span aria-hidden="true">↗</span></a>
+        <span>© <span data-year>2026</span> Anika Diaz de Rivera · Career e-Portfolio</span>
       </div>
     </div>
   </footer>

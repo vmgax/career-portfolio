@@ -1,87 +1,71 @@
-# Career e-Portfolio — Anika Diaz de Rivera
+# Career Portfolio — Anika Diaz de Rivera
 
-**Two designs are live at once so the client can choose.**
+Live at **https://vmgax.github.io/career-portfolio/**
 
-| | Style | URL |
-| --- | --- | --- |
-| **Version A** | Editorial — warm paper, Fraunces serif, oxblood accent, magazine grid | https://vmgax.github.io/career-portfolio/ |
-| **Version B** | Institutional — off-white, Newsreader + Manrope, forest green, spacious | https://vmgax.github.io/career-portfolio/v2/ |
-
-Each footer links to the other version. Once one is chosen, promote it to the root,
-delete the other folder, and remove those two links plus the `noindex` tags on v2.
-
-Static HTML/CSS/JS. No build step, no npm, no framework — edit, save, refresh.
+A four-page static website. No build step, no npm, no framework — edit a file, save,
+refresh the browser.
 
 ```
-index.html      Home        self-introduction · contents index          ← Version A
-about.html      About Me    education · positions · résumé · skills
-portfolio.html  Portfolio   academic work · organization work · references
-contact.html    Contact     email · LinkedIn · location
-styles.css      Version A styling
-main.js         Version A behaviour
-
-v2/index.html      Overview       hero · snapshot · impact · featured work · timeline · capabilities   ← Version B
-v2/about.html      Experience     intro · education · experience · awards · skills · direction
-v2/portfolio.html  Selected Work  category filters · 10 expandable case studies
-v2/contact.html    Contact        split layout · validated message form
-v2/styles.css      Version B styling
-v2/main.js         Version B behaviour
-
-assets/img/     Photos — SHARED by both versions
-assets/docs/    resume.pdf — SHARED by both versions
+index.html      Overview       hero · snapshot · impact · featured work · experience · capabilities · direction · contact
+about.html      Experience     intro · education · internship · leadership · awards · skills · career direction
+portfolio.html  Selected Work  category filters · 10 expandable case studies
+contact.html    Contact        split layout · validated message form
+styles.css      All styling (design tokens at the top)
+main.js         Nav · reveals · accordions · filters · lightbox · form validation
+assets/img/     Portrait, 9 event photos, thesis poster, favicon
+assets/docs/    resume.pdf (web-safe version — see the privacy note below)
 ```
 
-> **Sync rule.** Content lives in two places until one version is retired. Any change to
-> wording, dates or projects must be made in **both** the root files and `v2/`. Images and
-> the résumé PDF are shared, so those only ever change once.
+## Design
 
-## Still to add
+- **Type** — Newsreader for headings, Manrope for everything else, both from Google Fonts.
+- **Colour** — warm off-white `#F6F4EF`, charcoal `#18201D`, forest green `#174C3C`,
+  muted sage and a restrained gold. All defined as CSS custom properties in `:root`;
+  change a token there and it updates everywhere.
+- **Motion** — fade-and-rise entrances, staggered card reveals, animated nav underline,
+  smooth accordions. All 200–500ms, all disabled under `prefers-reduced-motion`.
+
+## Still open
 
 | # | What | Where |
 | --- | --- | --- |
-| 1 | **Dates you were Project Head of ENGLIVision** — currently reads "Date to confirm" | `about.html` ENGLICOM block |
-| 2 | *Optional* — name of the "Event Operations" event | `portfolio.html` B/03 |
-| 3 | *Optional* — public Canva **view** link for the full thesis | `portfolio.html` A/01 |
+| 1 | Confirm the **Sep 2024 – Apr 2025** date for Committee Coordinator (source read *Sep 2025 – Apr 2025*, which ends before it starts) | `index.html`, `about.html` — search `CHECK` |
+| 2 | Confirm Archers Network HR Head start: **Aug 2025** used; the CV says Sep 2025 | search `CHECK` |
+| 3 | Confirm Chinese New Year year: **2024** used; the CV says 2023 | search `CHECK` |
+| 4 | *Optional* — the month ENGLIVision ran, and the name of the "Event Operations" event | `portfolio.html` — search `REPLACE` |
+| 5 | *Optional* — a public Canva **view** link for the full thesis | `portfolio.html` |
 
-Item 1 is the only placeholder text still visible on the live site.
-
-Everything else is in: portrait, thesis poster, nine event photos with captions,
-the full CV detail, and the résumé PDF. Three `CHECK` comments mark dates that
-conflict between your two source documents — search for `CHECK` to see them.
-
-Search all files for `REPLACE` — that is the complete checklist. Anything marked
-`CHECK` is something in the source document that looked wrong and was left as written.
+Nothing above is a visible placeholder — the site reads as finished. `CHECK` and `REPLACE`
+appear only in HTML comments.
 
 ## How to edit
 
-Every editable string is marked in the HTML:
+### Text
+Open the page, find the words, change them. Headings, dates and body copy are all plain HTML.
 
-```html
-<!-- REPLACE: your thesis title -->
-```
+### Adding or removing a project
+Each project on `portfolio.html` is one `<article class="case">`. Copy a whole block to add
+one, delete a whole block to remove one. Two things to keep in step:
+
+- `data-category` must be one of `academic`, `civic`, `events`, `hr`, `comms`, `internship`
+  so the filters pick it up.
+- The count in `<p class="filter-status">` is the starting label — update it if the number
+  of projects changes.
 
 ### Swapping an image
+Drop the file in `assets/img/`, then set **both**:
+- `<img src="assets/img/your-file.jpg" alt="...">`
+- the wrapping `<button class="case__media" data-lightbox-src="assets/img/your-file.jpg">`
 
-1. Drop the file in `assets/img/` (JPG or PNG; ~1600 × 1200 px is plenty).
-2. Change **both** attributes on that item:
-   - `<img src="assets/img/your-file.jpg" alt="...">`
-   - the button's `data-lightbox-src="assets/img/your-file.jpg"`
+The second is what opens full-size. Keep `width` and `height` accurate — they reserve space
+and stop the page jumping while images load. Update the `alt` text too; it is what a screen
+reader announces.
 
-The second one is what opens when the image is clicked.
-
-### Adding or removing a work sample
-
-Each sample is one `<figure class="gallery-item">` block. Copy a whole block to add one,
-delete a whole block to remove one. The magazine layout re-flows automatically.
-
-### The navigation menu
-
-There is no build step, so the header and footer are **copied into all four pages**. If
-you change a nav link, change it in all four files.
+### Navigation, header and footer
+There is no build step, so the header and footer are **copied into all four pages**. Change
+a nav link and you change it in four files.
 
 ## Running it locally
-
-Double-click `index.html`, or serve it properly:
 
 ```bash
 py -m http.server 8000    # then open http://localhost:8000
@@ -95,24 +79,27 @@ git commit -m "what changed"
 git push
 ```
 
-Live again in under a minute at the same URL. GitHub Pages is set to deploy from `main`
-/ root; `.nojekyll` must stay in the repo.
+Live again in under a minute at the same URL. GitHub Pages deploys from `main` / root;
+`.nojekyll` must stay in the repo.
 
 **One rule that matters:** all paths are *relative* (`styles.css`, `assets/img/x.jpg`).
-Never change them to start with `/` — a leading slash breaks GitHub Pages project sites,
-and the styling disappears on the live URL while still looking fine locally.
+Never change them to start with `/` — a leading slash breaks GitHub Pages project sites, and
+the styling disappears on the live URL while still looking fine locally.
 
-## Privacy choices made here
+## Privacy choices
 
-- The personal Gmail address and mobile number from the source document were **left off**
-  this public page. Only the DLSU address is published.
-- Reference contact details are shown as "available on request" rather than published.
-- The Canva thesis link in the source document was an `/edit` URL — a private editing
-  link. It is **not** in this repo. Use a public *view* link instead.
+- `assets/docs/resume.pdf` is a **web-safe** export of the original CV: the home address is
+  replaced with "Manila, Philippines" and the mobile number is removed from the body and the
+  page footer. Nothing else was altered. Keep the unredacted original off this repo — this
+  folder is published to the public web.
+- The personal Gmail address and mobile number are not published anywhere on the site. Only
+  the DLSU address is.
+- The contact form has no backend. It validates in the browser and then opens the visitor's
+  email app with the message prefilled — nothing is stored or transmitted by the site. To
+  collect submissions properly, point the form at a service such as Formspree.
 
-## Notes
+## History
 
-- Type: Fraunces (display) · Archivo (body) · IBM Plex Mono (labels), from Google Fonts.
-- Animations respect `prefers-reduced-motion`.
-- Pages carry a print stylesheet — Ctrl/Cmd + P gives a clean copy with nav and buttons
-  stripped out.
+An earlier editorial design (warm paper, Fraunces serif, oxblood accent) was built and
+reviewed alongside this one. It was retired in favour of this version and remains in the git
+history if it is ever wanted back.
