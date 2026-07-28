@@ -81,11 +81,74 @@
     });
   });
 
-  /* 4 — PROJECT FILTERS -------------------------------------------------- */
+  /* 4 — WATERFALL LAYOUT + PROJECT FILTERS ------------------------------- */
 
   var filters = document.querySelectorAll('[data-filter]');
   var caseGrid = document.querySelector('[data-cases]');
   var filterStatus = document.querySelector('[data-filter-status]');
+  var relayout = function () {};
+
+  if (caseGrid) {
+    // Cards are distributed into real column elements rather than grid cells,
+    // so opening one card grows only the column it sits in. Neighbouring
+    // columns stay exactly where they are.
+    var allCards = Array.prototype.slice.call(caseGrid.querySelectorAll('.case'));
+    var columns = [];
+
+    var columnCount = function () {
+      var w = window.innerWidth;
+      if (w >= 992) return 3;
+      if (w >= 700) return 2;
+      return 1;
+    };
+
+    relayout = function () {
+      var n = columnCount();
+
+      columns.forEach(function (col) { col.parentNode && col.parentNode.removeChild(col); });
+      columns = [];
+
+      for (var i = 0; i < n; i++) {
+        var col = document.createElement('div');
+        col.className = 'case-col';
+        caseGrid.appendChild(col);
+        columns.push(col);
+      }
+
+      caseGrid.style.gridTemplateColumns = 'repeat(' + n + ', minmax(0, 1fr))';
+
+      // shortest-column-first keeps the columns roughly level
+      allCards.forEach(function (card) {
+        if (card.hidden) return;
+        var shortest = columns[0];
+        columns.forEach(function (col) {
+          if (col.offsetHeight < shortest.offsetHeight) shortest = col;
+        });
+        shortest.appendChild(card);
+      });
+    };
+
+    relayout();
+
+    // re-flow only when the column count actually changes, so a stray resize
+    // never reshuffles cards out from under someone mid-read
+    var lastCount = columnCount();
+    var resizeTimer = null;
+
+    window.addEventListener('resize', function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        var next = columnCount();
+        if (next !== lastCount) {
+          lastCount = next;
+          relayout();
+        }
+      }, 180);
+    });
+
+    // images without intrinsic sizing can land late and skew the balance
+    window.addEventListener('load', function () { relayout(); });
+  }
 
   if (filters.length && caseGrid) {
     var cases = caseGrid.querySelectorAll('.case');
@@ -98,6 +161,8 @@
         card.hidden = !match;
         if (match) shown += 1;
       });
+
+      relayout();
 
       Array.prototype.forEach.call(filters, function (btn) {
         btn.setAttribute('aria-pressed', btn.getAttribute('data-filter') === value ? 'true' : 'false');

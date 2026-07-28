@@ -985,16 +985,26 @@ p { margin: 0; }
 
 .filter-status { margin-bottom: 1.5rem; font-size: var(--t-sm); color: var(--ink-3); }
 
+/* Waterfall layout. main.js distributes the cards into real column
+   containers and sets the column count, so expanding a card grows only its
+   own column — the neighbouring columns never shift. Without JS this stays
+   a single readable stack. */
 .case-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  grid-template-columns: 1fr;
   gap: clamp(1.25rem, 2.5vw, 2rem);
   align-items: start;
 }
 
+.case-col {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-content: start;
+  min-width: 0;
+}
+
 .case {
-  display: flex;
-  flex-direction: column;
+  display: block;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -1031,10 +1041,10 @@ p { margin: 0; }
 
 .case:hover .case__media img { transform: scale(1.045); }
 
-.case__body { display: flex; flex-direction: column; flex: 1; padding: clamp(1.25rem, 2vw, 1.6rem); }
+.case__body { padding: clamp(1.25rem, 2vw, 1.6rem); }
 
 .case__tag {
-  align-self: flex-start;
+  display: inline-block;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   background: var(--sage-tint);
@@ -1073,7 +1083,6 @@ p { margin: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: auto;
   padding-top: 1.25rem;
 }
 
